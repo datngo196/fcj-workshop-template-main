@@ -4,132 +4,22 @@ date: 2025-09-09
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
-
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+## Chứng nhận ISO năm 2025 và CSA STAR hiện đã khả dụng cùng với hai dịch vụ bổ sung 
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+*Bởi **Chinmaee** Parulekar, đăng ngày 17 tháng 9 năm 2025, thuộc chuyên mục **[Announcements](https://aws.amazon.com/blogs/security/category/post-types/announcements/)**, **[Foundational (100)](https://aws.amazon.com/blogs/security/category/learning-levels/foundational-100/)**, **[Security, Identity & Compliance](https://aws.amazon.com/blogs/security/category/security-identity-compliance/)*
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
+Amazon Web Services (AWS) đã hoàn tất thành công cuộc kiểm toán mở rộng mà không có bất kỳ phát hiện sai sót nào cho các tiêu chuẩn ISO [9001:2015](https://aws.amazon.com/compliance/iso-9001-faqs/), [27001:2022](https://aws.amazon.com/compliance/iso-27001-faqs/), [27017:2015](https://aws.amazon.com/compliance/iso-27017-faqs/), [27018:2019](https://aws.amazon.com/compliance/iso-27018-faqs/), [27701:2019](https://aws.amazon.com/compliance/iso-27701-faqs/), [20000-1:2018](https://aws.amazon.com/compliance/iso-20000-faqs/),  [22301:2019](https://aws.amazon.com/compliance/iso-22301-faqs/) và [Tiêu chuẩn Cloud Security Alliance (CSA) STAR Cloud Controls Matrix (CCM) v4.0](https://aws.amazon.com/compliance/csa/). Cuộc kiểm toán được thực hiện bởi EY CertifyPoint, và các chứng chỉ đã được cấp lại vào ngày 13 tháng 8 năm 2025. Mục tiêu của cuộc kiểm toán là giúp AWS mở rộng phạm vi các chứng nhận ISO và CSA STAR để bao gồm thêm hai dịch vụ AWS Resource Explorer và AWS Incident Response. Các tiêu chuẩn ISO này bao phủ các lĩnh vực như quản lý chất lượng, an ninh thông tin, bảo mật đám mây, bảo vệ quyền riêng tư, quản lý dịch vụ và duy trì hoạt động kinh doanh liên tục. Việc đạt được các chứng nhận này thể hiện cam kết của AWS trong việc duy trì các biện pháp kiểm soát an ninh mạnh mẽ và bảo vệ dữ liệu khách hàng trên toàn bộ các dịch vụ của mình.
 
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, _“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”_, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
+Trong cuộc kiểm toán mở rộng này, chúng tôi đã bổ sung thêm hai dịch vụ AWS mới vào phạm vi chứng nhận kể từ lần cấp chứng chỉ gần nhất vào ngày 26 tháng 5 năm 2025. Hai dịch vụ được bổ sung bao gồm:
 
----
+- [AWS Resource Explorer](https://aws.amazon.com/resourceexplorer/)
 
-## Hướng dẫn kiến trúc
+- [AWS Security Incident Response](https://aws.amazon.com/security-incident-response/)
 
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
+Để xem danh sách đầy đủ các dịch vụ AWS đã được chứng nhận theo tiêu chuẩn ISO và CSA STAR, vui lòng truy cập trang AWS [ISO and CSA STAR Certified](http://aws.amazon.com/compliance/iso-certified). Khách hàng cũng có thể truy cập các chứng chỉ này trực tiếp trong AWS Management Console thông qua [AWS Artifact](https://aws.amazon.com/artifact/).
 
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
+|  | Chinmaee Parulekar là Quản lý Chương trình Tuân thủ (Compliance Program Manager) tại AWS, với 6 năm kinh nghiệm trong lĩnh vực an ninh thông tin. Cô sở hữu bằng Thạc sĩ Khoa học (Master of Science) chuyên ngành Hệ thống Thông tin Quản lý (Management Information Systems), cùng các chứng chỉ nghề nghiệp như CISA và HITRUST CCSF Practitioner. |
+|---|---|
 
-**Kiến trúc giải pháp bây giờ như sau:**
-
-> _Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt._
-
----
-
-Mặc dù thuật ngữ _microservices_ có một số sự mơ hồ cố hữu, một số đặc điểm là chung:
-
-- Chúng nhỏ, tự chủ, kết hợp rời rạc
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ
-- Chuyên biệt để giải quyết một việc
-- Thường được triển khai trong **event-driven architecture**
-
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:
-
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng
-- **Con người**: quyền sở hữu nhóm, quản lý _cognitive load_
-
----
-
-## Lựa chọn công nghệ và phạm vi giao tiếp
-
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
-
----
-
-## The pub/sub hub
-
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.
-
-- Mỗi microservice chỉ phụ thuộc vào _hub_
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất
-- Giảm số lượng synchronous calls vì pub/sub là _push_ không đồng bộ một chiều
-
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
-
----
-
-## Core microservice
-
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:
-
-- **Amazon S3** bucket cho dữ liệu
-- **Amazon DynamoDB** cho danh mục dữ liệu
-- **AWS Lambda** để ghi message vào data lake và danh mục
-- **Amazon SNS** topic làm _hub_
-- **Amazon S3** bucket cho artifacts như mã Lambda
-
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
-
----
-
-## Front door microservice
-
-- Cung cấp API Gateway để tương tác REST bên ngoài
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**
-- Cơ chế _deduplication_ tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
-
----
-
-## Staging ER7 microservice
-
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute
-- Step Functions Express Workflow để chuyển ER7 → JSON
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
-
----
-
-## Tính năng mới trong giải pháp
-
-### 1. AWS CloudFormation cross-stack references
-
-Ví dụ _outputs_ trong core microservice:
-
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
-```

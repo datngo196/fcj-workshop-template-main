@@ -1,14 +1,10 @@
+---
 title: "Blog 3"
 date: 2025-09-09
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
-
 ---
-
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
 # Getting Started with Healthcare Data Lakes: Using Microservices
 
