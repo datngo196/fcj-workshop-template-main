@@ -1,84 +1,69 @@
 ---
-title: "GenAI & Cloud Innovation Showcase"
-date: 2025-09-09
+title: "AWS First Cloud Journey Community Day"
+date: 2025-08-30
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
+# Summary Report: “AWS First Cloud Journey Community Day”
 
 ### Event Objectives
 
-- Share community vision and update on the latest technology trends from AWS
-- Introduce practical GenAI applications in Enterprise, Fintech, and Education
-- Provide knowledge on Serverless architecture, Multi-Agent Systems, and automation processes
-- Create networking opportunities between experts, developers, and businesses
+-   Foster the AWS community vision and connect industry professionals.
+-   Demonstrate practical applications of Generative AI in Enterprise, Banking, and Academic sectors.
+-   Explore advanced architectures including RAG (Retrieval-Augmented Generation) and Multi-Agent Systems.
+-   Showcase serverless implementations for scalable AI solutions.
 
 ### Speakers
 
-- **Nguyen Gia Hung** – Head of Solutions Architect, AWS
-- **Hai Tran** – Speaker on Cloud-native & Banking
-- **Nguyen Viet Phap** – Speaker on eCommerce & AI Audit
-- **Dinh Le Hoang Anh, Nguyen Hong Nhung** – Speakers on Fintech/Chatbot
-- And other experts: Pham Tien Thuan Phat, Le Minh Nghia, Kiet Lam, Hien Ha, Viet Ly...
+-   **Nguyễn Gia Hưng** – Head of Solutions Architect, AWS
+-   **Phạm Tiến Thuận Phát, Lê Minh Nghĩa, Trần Đoàn Công Lý** – Enterprise Software
+-   **Đinh Lê Hoàng Anh, Nguyễn Tài Minh Huy** – Academic Sector
+-   **Kiệt Lâm, Nguyễn Ngọc Quỳnh Mai** – Banking / Internal IT
+-   **Lê Phạm Ngọc Uyển, Phan Thị Thanh Thảo, Hồ Điền Đăng Khoa, Nguyễn Quang Nhật Linh** – Banking / Process Automation
+-   **Việt Lý** – AWS Partner / Cloud & AI
 
 ### Key Highlights
 
-#### Opening & Vision
-- **Community Vision**: Introduction to community development direction and welcome message from AWS Solutions Architect.
-- **Networking**: Networking opportunity at Bitexco Tower lobby before splitting into breakout sessions.
+#### 1. Community Vision
+-   **Opening Remarks**: Mr. Nguyễn Gia Hưng kicked off the event at Bitexco Tower, outlining the vision for the AWS community and the objectives of sharing practical, hands-on cloud knowledge.
 
-#### Enterprise & Fintech Applications (Parallel Floors 26 & 36)
-- **Enterprise Chatbot (Context with MCP)**: Building enterprise chatbots with advanced context handling capabilities, real-world deployment on AWS.
-- **Stock Trading Chatbot**: Serverless Chatbot application supporting real-time stock trading.
-- **Amazon Nova Act**: Introduction to Cloud-native architecture for banking, focusing on scalability patterns.
+#### 2. Enterprise & Contextual AI
+-   **Enterprise Chatbot with MCP**: The team presented on unlocking context using the **Model Context Protocol (MCP)** on AWS. They demonstrated how to build chatbots that handle complex enterprise context effectively, sharing lessons learned from actual implementation.
 
-#### GenAI in Action: From Recipes to eCommerce
-- **GenAI Kitchen Recipe**: Personalized recipe recommendation system, illustrating workflow design on AWS.
-- **Scaling eCommerce**: Leveraging GenAI to personalize customer experiences and optimize scaling performance for eCommerce.
-- **Internal RAG Chatbot**: Building an internal FAQ chatbot using RAG (Retrieval-Augmented Generation) technique, fully on a Serverless platform.
+#### 3. Real-World GenAI Applications
+-   **Kitchen Recipe Recommendation**: An academic showcase featuring a personalized system powered by GenAI. The session detailed the AWS workflow design used to tailor recipes to user preferences.
+-   **Internal Chatbot with RAG**: A deep dive into building an FAQ and knowledge base bot using **Retrieval-Augmented Generation (RAG)**. The key takeaway was the **fully serverless architecture**, ensuring cost-effectiveness and scalability.
 
-#### Advanced Automation: Agents & Auditing
-- **GenAI Multi-Agent Systems**: Application of multi-agent systems to automate banking processes.
-- **Auto Audit Framework**: Automated auditing framework using AI, orchestrating multi-agent workflows.
-- **Smart Data Contracts**: Applying GenAI to build and validate smart data contracts in Fintech.
+#### 4. Advanced Automation in Banking
+-   **Multi-Agent Systems**: A highlight session on applying **GenAI Multi-Agent Systems** to automate complex banking processes. The speakers shared real-world case studies demonstrating how multiple agents coordinate to handle specific banking tasks using serverless workflows.
+
+#### 5. Tools & Orchestration
+-   **GenAI with Kiro IDE & Strands Agent**: Explored the application of GenAI in both Production and R&D environments. The session focused on **workflow orchestration** and featured a live multi-agent demo on AWS.
 
 ### Key Takeaways
 
-#### Architecture Patterns
-- **Serverless First**: Most solutions (Chatbot, Trading, Internal Tools) prioritize Serverless architecture to optimize costs and operations.
-- **Multi-Agent Orchestration**: A trend shifting from single-task to coordinated multi-agent systems to solve complex processes (Audit, Banking processes).
-- **RAG & Context Handling**: RAG techniques and context handling (MCP) are key to making Chatbots useful in an enterprise environment.
+#### Architectural Shift
+-   **From Chatbots to Agents**: The industry is moving beyond simple Q&A bots towards **Multi-Agent Systems** that can execute complex tasks and workflows, especially in regulated sectors like Banking.
+-   **Serverless is Key**: Both RAG and Agent systems were heavily demonstrated on **Serverless AWS** infrastructure, highlighting it as the standard for modern AI deployment.
 
-#### Business Impact
-- **Personalization**: GenAI plays a core role in personalizing user experiences (eCommerce, Recipe apps).
-- **Automation Efficiency**: Automating traditional, labor-intensive processes like Auditing or contract processing.
+#### Practical Implementation
+-   **Context is King**: For enterprise adoption, handling context (via MCP or RAG) is crucial for relevance and accuracy.
+-   **Orchestration**: Tools like Kiro IDE and Strands Agent are emerging to help manage the complexity of AI workflows.
 
 ### Applying to Work
 
-- **Deploy RAG**: Apply Serverless RAG models for the company's internal Knowledge Bases.
-- **Experiment with Multi-Agent**: Research and apply multi-agent workflows for complex tasks requiring multi-step coordination.
-- **Context Optimization**: Improve current Chatbots by applying Context Handling (like MCP) for more natural responses.
-- **Adoption of Amazon Nova/Tools**: Explore and integrate new tools like Amazon Nova Act or Kiro IDE into the development process.
+-   **Evaluate Multi-Agent Systems**: Investigate using a multi-agent approach for complex internal automation tasks rather than a single monolithic model.
+-   **Adopt Serverless RAG**: Review current internal knowledge bases and prototype a Serverless RAG solution to improve information retrieval.
+-   **Explore MCP**: Research the Model Context Protocol to see if it improves context retention in our current chatbot applications.
 
 ### Event Experience
 
-Attending the **“GenAI & Cloud Innovation Showcase”** at Bitexco Tower was a rich experience, providing a multi-dimensional view of GenAI applications from theory to production reality.
-
-#### Learning from diverse tracks
-- The division into **Parallel Sessions** between **Floor 26** (Enterprise/Academic) and **Floor 36** (Banking/Fintech) allowed attendees to choose specialized topics.
-- Gained access to the latest knowledge on **Amazon Nova Act** and **Multi-Agent Systems** from experienced speakers.
-
-#### Real-world Case Studies
-- Impressed by **Live demos** such as the **Stock Trading Chatbot** and **Auto Audit Framework**, proving the feasibility of GenAI in demanding sectors like finance.
-- Gained a clearer understanding of designing **Smart Data Contracts** and banking automation processes.
-
-#### Networking Atmosphere
-- The atmosphere at the Bitexco lobby was vibrant, facilitating discussions with speakers about **Serverless** and **GenAI workflows**.
-- Real-world lessons from "Scaling eCommerce" or "Building Enterprise Chatbot" reinforced the **Business-first** mindset when applying technology.
+The event at Bitexco Tower provided a dense morning of technical insights. The parallel sessions allowed for a deep dive into specific industry verticals.
+-   **Networking**: The "Welcome Coffee" and "Buffer" sessions provided excellent opportunities to connect with AWS Solution Architects and industry peers.
+-   **Practical Demos**: Seeing live demos of **Multi-Agent systems** in banking and **Recipe Recommendations** bridged the gap between GenAI theory and tangible product delivery.
 
 #### Some event photos
 
 _Add your event photos here_
-
-> Overall, the event provided a comprehensive picture of how GenAI is shifting from experimental models to robust Production systems, especially in the Finance and Enterprise sectors.

@@ -16,7 +16,7 @@ OIDC client secret là các thông tin đăng nhập bí mật được sử d�
 
 Như hình 1 minh họa, quản lý thủ công OIDC client secret bắt đầu bằng xác thực thông qua một IdP bên thứ ba.
 
-![Enter image alt description](Images/9m0_Image_1.png)
+![](/images/3-BlogsTranslated/blog_2/fig_1_blog_2.png)
 
 **Hình 1: Quản lý thủ công OIDC client secret**
 
@@ -51,7 +51,7 @@ Giải pháp này cung cấp khung linh hoạt để quản lý thông tin đăn
 
 - Custom  [AWS CloudFormation](https://aws-security-blog-content.s3.us-east-1.amazonaws.com/public/sample/2919-automate-oidc-client-secrete-rotation/template-automate-oidc.yaml) resource: Tự động hóa toàn bộ stack và kiến trúc được sử dụng trong bài viết này.
 
-![Enter image alt description](Images/8md_Image_2.png)
+![](/images/3-BlogsTranslated/blog_2/fig_2_blog_2.png)
 
 **Hình 2: Tự động xoay vòng OIDC client secret**
 
@@ -293,5 +293,5 @@ Trong bài viết này, bạn đã khám phá cách tiếp cận toàn diện đ
 Hãy cân nhắc khám phá các kỹ thuật quản lý danh tính nâng cao hoặc tích hợp xác thực đa yếu tố (MFA) với triển khai OIDC của bạn. \
  Nếu bạn mới làm quen với tự động xoay vòng secrets, tham khảo bài viết [Back to Basics: Secrets Management](https://youtu.be/6oPHw7rT9OI?did=ta_card&trk=ta_card).
 
-|  | Kani Murugan is a tenured security engineer at Amazon Security, where she specializes in product security with a focus on application, network, and data security. With over 8 years of experience in various security domains, Kani brings a wealth of knowledge to her role. Outside of work, Kani is an anime enthusiast and an indiscriminate reader across diverse topics. |
+| ![](/images/3-BlogsTranslated/blog_2/fig_3_blog_2.png) | Kani Murugan là một kỹ sư bảo mật đã được bổ nhiệm biên chế (tenured) tại Amazon Security, nơi cô chuyên về bảo mật sản phẩm, tập trung vào bảo mật ứng dụng, mạng và dữ liệu. Với hơn 8 năm kinh nghiệm trong nhiều lĩnh vực bảo mật khác nhau, Kani mang đến cho công việc của mình một nền tảng kiến thức phong phú. Ngoài công việc, Kani là người đam mê anime và là một độc giả “không kén chọn”, đọc nhiều chủ đề đa dạng. |
 |---|---|

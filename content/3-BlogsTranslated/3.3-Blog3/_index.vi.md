@@ -36,7 +36,7 @@ Raspberry Pi 5 có thiết kế nhỏ gọn và có thể triển khai tại bi�
 **Tổng quan kiến trúc** \
  Trong môi trường đám mây, chúng tôi triển khai một [Amazon Virtual Private Cloud (Amazon VPC)](https://aws.amazon.com/vpc/) chứa cụm Amazon EKS. Bên trong VPC này, một phiên bản Amazon EC2 đóng vai trò cổng kết nối (gateway) giữa môi trường đám mây và mạng biên (edge network) tại cơ sở. Phiên bản EC2 này thiết lập một đường hầm VPN bảo mật site-to-site sử dụng WireGuard, kết nối với Raspberry Pi 5, thiết bị đóng vai trò là Hybrid Node của chúng tôi. Khi đường hầm VPN được thiết lập, lưu lượng dữ liệu giữa Raspberry Pi và đám mây sẽ được định tuyến thông qua máy chủ WireGuard đang chạy trên Amazon EC2, giúp mở rộng cụm EKS ra đến vùng biên. Từ góc nhìn của cụm EKS, Raspberry Pi hoạt động giống như bất kỳ node nào khác, mặc dù nó nằm ngoài phạm vi của VPC. Kiến trúc tổng thể được thể hiện trong hình minh họa bên dưới.
 
-![Enter image alt description](Images/rfy_Image_1.png)
+![](/images/3-BlogsTranslated/blog_3/fig_1_blog_3.png)
 
 Mặt điều khiển Kubernetes (control plane) được quản lý hoàn toàn bởi AWS, bao gồm API server, etcd datastore, scheduler và controller manager. Trong phần hướng dẫn này, chúng tôi cấu hình control plane của Kubernetes với điểm truy cập công khai (public endpoint), cho phép các node Raspberry Pi có thể giao tiếp với control plane thông qua Internet. AWS đảm nhận toàn bộ sự phức tạp trong việc bảo mật và mở rộng control plane của Kubernetes để đảm bảo tính sẵn sàng cao (high availability), giúp bạn có thể tập trung vào phát triển và triển khai ứng dụng của mình.
 
@@ -244,7 +244,7 @@ ip-10-0-6-175.ec2.internal  Ready   <none>  9m31s   v1.30.9-eks-5d632ec
 ```
 Khi cụm của chúng ta hoạt động và mạng lưới container hoạt động như mong đợi, chúng ta sẽ thấy nút ở trạng thái Sẵn sàng trên Bảng thông tin tổng quan về nút Amazon EKS, như minh họa trong hình sau.
 
-![Enter image alt description](Images/BvO_Image_2.png)
+![](/images/3-BlogsTranslated/blog_3/fig_2_blog_3.png)
 
 **Triển khai ứng dụng mẫu trên Amazon EKS Hybrid Nodes với tích hợp edge**
 
@@ -299,7 +299,7 @@ Sơ đồ minh họa được cung cấp để làm rõ cách bố trí này.
 
 Bản đồ GPIO này sau này có thể được trừu tượng hóa và quản lý động qua Kubernetes ConfigMaps, giúp linh hoạt trong việc xử lý cấu hình phần cứng cho các deployment khác nhau. Chúng tôi sẽ trình bày chi tiết ở phần sau.
 
-![Enter image alt description](Images/OB7_Image_3.png)
+![](/images/3-BlogsTranslated/blog_3/fig_3_blog_3.png)
 
 ### **Bước 2: Triển khai bảng DynamoDB**
 
@@ -366,7 +366,7 @@ kubectl logs <pod-name>
 ```
 Bạn sẽ thấy các giá trị khoảng cách xuất hiện trong logs, và các kết quả tương tự cũng sẽ hiển thị trên bảng DynamoDB.
 
-![Enter image alt description](Images/p6R_Image_4.png)
+![](/images/3-BlogsTranslated/blog_3/fig_4_blog_3.png)
 
 ### **Bước 4: Triển khai frontend dashboard**
 
@@ -394,7 +394,7 @@ Truy cập dashboard từ **trình duyệt** bằng cách mở `http://localhost
 
 Bạn sẽ thấy biểu đồ trực tiếp (live chart) cập nhật các giá trị khoảng cách theo thời gian thực, được truy xuất trực tiếp từ bảng DynamoDB.
 
-![Enter image alt description](Images/T7l_Image_5.png)
+![](/images/3-BlogsTranslated/blog_3/fig_5_blog_3.png)
 
 **Kết luận**
 
@@ -406,7 +406,7 @@ Muốn tự thử nghiệm? Hãy tham khảo [repository GitHub](https://github.
 
 **Về các tác giả**
 
-|  | Alberto Crescini là Enterprise Solutions Architect tại AWS, hỗ trợ các công ty năng lượng và tiện ích ở Vương quốc Anh xây dựng hạ tầng cho quá trình chuyển đổi năng lượng. Anh hỗ trợ khách hàng trong các dự án như cân bằng lưới điện (grid balancing) và sản xuất năng lượng linh hoạt (flexible generation), đồng thời hướng dẫn họ hiện đại hóa hệ thống và nền tảng hyperscale thông qua lĩnh vực tập trung AWS Containers. |
+| ![](/images/3-BlogsTranslated/blog_3/fig_6_blog_3.png) | Alberto Crescini là Enterprise Solutions Architect tại AWS, hỗ trợ các công ty năng lượng và tiện ích ở Vương quốc Anh xây dựng hạ tầng cho quá trình chuyển đổi năng lượng. Anh hỗ trợ khách hàng trong các dự án như cân bằng lưới điện (grid balancing) và sản xuất năng lượng linh hoạt (flexible generation), đồng thời hướng dẫn họ hiện đại hóa hệ thống và nền tảng hyperscale thông qua lĩnh vực tập trung AWS Containers. |
 |---|---|
-|  | Utkarsh Pundir là Containers Specialist Solutions Architect tại AWS, nơi anh hỗ trợ khách hàng xây dựng các giải pháp trên EKS. Các lĩnh vực trọng tâm của anh bao gồm kiến trúc lai (hybrid architecture) và triển khai workload Generative AI trên EKS như một phần của các sáng kiến go-to-market của AWS. |
-|  | Gladwin Neo là Containers Specialist Solutions Architect tại AWS, nơi anh hỗ trợ khách hàng di chuyển và hiện đại hóa các workload để triển khai trên Amazon Elastic Kubernetes Service (EKS) hoặc Amazon Elastic Container Service (ECS). |
+| ![](/images/3-BlogsTranslated/blog_3/fig_7_blog_3.png) | Utkarsh Pundir là Containers Specialist Solutions Architect tại AWS, nơi anh hỗ trợ khách hàng xây dựng các giải pháp trên EKS. Các lĩnh vực trọng tâm của anh bao gồm kiến trúc lai (hybrid architecture) và triển khai workload Generative AI trên EKS như một phần của các sáng kiến go-to-market của AWS. |
+| ![](/images/3-BlogsTranslated/blog_3/fig_8_blog_3.png) | Gladwin Neo là Containers Specialist Solutions Architect tại AWS, nơi anh hỗ trợ khách hàng di chuyển và hiện đại hóa các workload để triển khai trên Amazon Elastic Kubernetes Service (EKS) hoặc Amazon Elastic Container Service (ECS). |

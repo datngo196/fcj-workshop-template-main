@@ -7,6 +7,8 @@ pre: " <b> 4.3. </b> "
 
 ---
 
+# Báo cáo tổng hợp: “AWS AI/ML & GenAI Workshop”
+
 ### Event Objectives
 
 - Cung cấp cái nhìn tổng quan về thị trường và xu hướng AI/ML tại Việt Nam

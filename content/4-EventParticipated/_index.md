@@ -6,23 +6,11 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-> In this section, you should list and describe in detail the events you have participated in during your internship or work experience.
->
-> Each event should be presented in the format Event 1, Event 2, Event 3…, along with the following details:
->
-> - Event name
-> - Date and time
-> - Location (if applicable)
-> - Your role in the event (attendee, event support, speaker, etc.)
-> - A brief description of the event’s content and main activities
-> - Outcomes or value gained (lessons learned, new skills, contribution to the team/project)
-> - This listing helps demonstrate your actual participation as well as the soft skills and experience you have gained from each event.
-
 During my internship, I participated in five events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.
 
 ### [Event 1](4.1-Event1/)
 
-&emsp;**Event Name:** GenAI & Cloud Innovation Showcase
+&emsp;**Event Name:** AWS First Cloud Journey Community Day
 
 &emsp;**Date & Time:** 09:00, August 30, 2025
 
@@ -75,5 +63,17 @@ During my internship, I participated in five events. Each one was a memorable ex
 &emsp;**Date & Time:** 08:30, November 29, 2025
 
 &emsp;**Location:** Bitexco Tower, 02 Hai Trieu Street, Ho Chi Minh City
+
+&emsp;**Role:** Attendee
+
+---
+
+### [Event 6](4.5-Event5/)
+
+&emsp;**Event Name:** Workshop: Data Science on AWS
+
+&emsp;**Date & Time:** 09:30, October 16, 2025
+
+&emsp;**Location:** Hall Academic – FPT University, Ho Chi Minh City
 
 &emsp;**Role:** Attendee

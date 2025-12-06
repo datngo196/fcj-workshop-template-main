@@ -6,6 +6,7 @@ chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
+# Summary Report: “AWS AI/ML & GenAI Workshop”
 
 ### Event Objectives
 

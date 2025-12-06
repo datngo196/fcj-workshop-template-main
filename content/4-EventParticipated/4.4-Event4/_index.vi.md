@@ -7,6 +7,8 @@ pre: " <b> 4.4. </b> "
 
 ---
 
+# Báo cáo tổng hợp: “AWS DevOps & Modern Operations”
+
 ### Event Objectives
 
 - Xây dựng tư duy DevOps và nắm vững các chỉ số đo lường hiệu quả (DORA metrics)

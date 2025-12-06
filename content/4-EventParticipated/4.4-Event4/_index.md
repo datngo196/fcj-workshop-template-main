@@ -7,6 +7,8 @@ pre: " <b> 4.4. </b> "
 
 ---
 
+# Summary Report: “AWS DevOps & Modern Operations”
+
 ### Event Objectives
 
 - Build a DevOps mindset and master key efficiency metrics (DORA metrics)

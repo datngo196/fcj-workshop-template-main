@@ -20,6 +20,6 @@ Trong cuộc kiểm toán mở rộng này, chúng tôi đã bổ sung thêm hai
 
 Để xem danh sách đầy đủ các dịch vụ AWS đã được chứng nhận theo tiêu chuẩn ISO và CSA STAR, vui lòng truy cập trang AWS [ISO and CSA STAR Certified](http://aws.amazon.com/compliance/iso-certified). Khách hàng cũng có thể truy cập các chứng chỉ này trực tiếp trong AWS Management Console thông qua [AWS Artifact](https://aws.amazon.com/artifact/).
 
-|  | Chinmaee Parulekar là Quản lý Chương trình Tuân thủ (Compliance Program Manager) tại AWS, với 6 năm kinh nghiệm trong lĩnh vực an ninh thông tin. Cô sở hữu bằng Thạc sĩ Khoa học (Master of Science) chuyên ngành Hệ thống Thông tin Quản lý (Management Information Systems), cùng các chứng chỉ nghề nghiệp như CISA và HITRUST CCSF Practitioner. |
+| ![](/images/3-BlogsTranslated/blog_1/fig_1_blog_1.png) | Chinmaee Parulekar là Quản lý Chương trình Tuân thủ (Compliance Program Manager) tại AWS, với 6 năm kinh nghiệm trong lĩnh vực an ninh thông tin. Cô sở hữu bằng Thạc sĩ Khoa học (Master of Science) chuyên ngành Hệ thống Thông tin Quản lý (Management Information Systems), cùng các chứng chỉ nghề nghiệp như CISA và HITRUST CCSF Practitioner. |
 |---|---|
 

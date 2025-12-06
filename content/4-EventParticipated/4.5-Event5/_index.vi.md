@@ -7,6 +7,7 @@ pre: " <b> 4.5. </b> "
 
 ---
 
+# Báo cáo tổng hợp: “AWS Security Specialty Workshop”
 
 ### Event Objectives
 

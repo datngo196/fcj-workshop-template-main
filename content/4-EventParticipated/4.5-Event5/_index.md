@@ -6,6 +6,7 @@ chapter: false
 pre: " <b> 4.5. </b> "
 ---
 
+# Summary Report: “AWS Security Specialty Workshop”
 
 ### Event Objectives
 

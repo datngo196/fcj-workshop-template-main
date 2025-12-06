@@ -1,10 +1,12 @@
 ---
-title: "AI-Driven Development Workshop"
+title: "AI-Driven Development Life Cycle"
 date: 2025-10-03
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
+
+# Báo cáo tổng hợp: “AI-Driven Development Life Cycle”
 
 ### Event Objectives
 
